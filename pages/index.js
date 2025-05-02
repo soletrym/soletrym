@@ -23,7 +23,7 @@ export default function Home() {
 
       <div className="mb-6 w-full max-w-xl">
         <video controls className="w-full rounded shadow-lg">
-          <source src="/video.mp4" type="video/mp4" />
+          <source src="/a6K117m_460svh265.MP4" type="video/mp4" />
           Nettleseren din støtter ikke video-taggen.
         </video>
       </div>
