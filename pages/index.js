@@ -1,53 +1,34 @@
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 
 export default function Home() {
-  const [text, setText] = useState('');
-  const [link, setLink] = useState('');
   const [darkMode, setDarkMode] = useState(false);
-  const router = useRouter();
-
-  function generateId(length = 6) {
-    return Math.random().toString(36).substr(2, length);
-  }
-
-  const handleSave = () => {
-    const id = generateId();
-    localStorage.setItem(id, text);
-    setLink(`${window.location.origin}/${id}`);
-  };
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-b from-gray-100 to-gray-200'} min-h-screen flex flex-col items-center justify-center p-6`}>
+    <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-pink-100 text-gray-800'} min-h-screen flex flex-col items-center p-6 font-[Comic Sans MS]`}>
       <button
         onClick={toggleDarkMode}
         className="absolute top-4 right-4 px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600"
       >
         {darkMode ? '☀️ Lys modus' : '🌙 Mørk modus'}
       </button>
-      <h1 className="text-4xl font-extrabold mb-6">🚀 Soletrym 🚀</h1>
-      <textarea
-        className="w-full max-w-xl h-64 p-4 border-2 rounded-xl shadow-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
-        placeholder="Skriv inn teksten her..."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
+      <h1 className="text-5xl font-extrabold mb-4">Velkommen!</h1>
+      <p className="max-w-xl text-center mb-6 text-lg">
+        Jeg heter Trym Solevåg og er komiker på deltid. Jeg elsker morsomme ting og ønsker å skape en plattform hvor vi kan ha det gøy og le sammen. Jeg har en herlig hund som heter Fam og skal bli pappa for første gang i august! Jeg elsker naturen, fotball og Liverpool, og jeg gamer en del – men jeg er spent på om det blir mindre tid til gaming når jeg blir pappa. Følg meg på Snapchat og TikTok for mer moro og innhold!
+      </p>
+      <h2 className="text-2xl font-bold mb-2">Her kan du følge meg på Snapchat</h2>
+      <img src="/snapkode.jpg" alt="Snapchat kode" className="mb-6 w-48 h-48 rounded shadow-lg" />
+      <h2 className="text-2xl font-bold mb-2">Her kan du følge meg på TikTok</h2>
+      <img src="/tiktokkode.jpg" alt="TikTok kode" className="mb-6 w-48 h-48 rounded shadow-lg" />
       <button
-        onClick={handleSave}
-        className="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-md hover:bg-blue-700 transition duration-200"
+        onClick={() => window.location = 'mailto:trymsolevaag@gmail.com'}
+        className="mt-6 px-6 py-3 bg-green-500 text-white font-semibold rounded-xl shadow-md hover:bg-green-600"
       >
-        💾 Lagre
+        💌 Kontakt meg: trymsolevaag@gmail.com
       </button>
-      {link && (
-        <div className="mt-6 text-center">
-          <p className="text-lg font-medium">Linken din:</p>
-          <a href={link} className="text-blue-400 underline break-all">{link}</a>
-        </div>
-      )}
     </div>
   );
 }
