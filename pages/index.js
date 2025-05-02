@@ -29,7 +29,7 @@ export default function Home() {
       >
         {darkMode ? '☀️ Lys modus' : '🌙 Mørk modus'}
       </button>
-      <h1 className="text-4xl font-extrabold mb-6">🚀 SoleTrym Paste 🚀</h1>
+      <h1 className="text-4xl font-extrabold mb-6">🚀 Soletrym 🚀</h1>
       <textarea
         className="w-full max-w-xl h-64 p-4 border-2 rounded-xl shadow-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
         placeholder="Skriv inn teksten her..."
