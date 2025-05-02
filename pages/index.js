@@ -20,9 +20,19 @@ export default function Home() {
         Jeg heter Trym Solevåg og er komiker på deltid. Jeg elsker morsomme ting og ønsker å skape en plattform hvor vi kan ha det gøy og le sammen. Jeg har en herlig hund som heter Fam og skal bli pappa for første gang i august! Jeg elsker naturen, fotball og Liverpool, og jeg gamer en del – men jeg er spent på om det blir mindre tid til gaming når jeg blir pappa. Følg meg på Snapchat og TikTok for mer moro og innhold!
       </p>
       <h2 className="text-2xl font-bold mb-2">Her kan du følge meg på Snapchat</h2>
-      <img src="/snapkode.jpg" alt="Snapchat kode" className="mb-6 w-48 h-48 rounded shadow-lg" />
+      <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer">
+        <img src="/snapkode.jpg" alt="Snapchat kode" className="mb-2 w-48 h-48 rounded shadow-lg" />
+      </a>
+      <p className="mb-6 underline text-blue-400">
+        <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer">Legg meg til på Snapchat</a>
+      </p>
       <h2 className="text-2xl font-bold mb-2">Her kan du følge meg på TikTok</h2>
-      <img src="/tiktokkode.jpg" alt="TikTok kode" className="mb-6 w-48 h-48 rounded shadow-lg" />
+      <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">
+        <img src="/tiktokkode.jpg" alt="TikTok kode" className="mb-2 w-48 h-48 rounded shadow-lg" />
+      </a>
+      <p className="mb-6 underline text-blue-400">
+        <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">Følg meg på TikTok</a>
+      </p>
       <button
         onClick={() => window.location = 'mailto:trymsolevaag@gmail.com'}
         className="mt-6 px-6 py-3 bg-green-500 text-white font-semibold rounded-xl shadow-md hover:bg-green-600"
