@@ -2,9 +2,19 @@ import { useState } from 'react';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location = `mailto:trymsolevaag@gmail.com?subject=Melding fra ${formData.name}&body=${formData.message}%0A%0AFra: ${formData.email}`;
   };
 
   return (
@@ -42,12 +52,39 @@ export default function Home() {
       <p className="mb-6 underline text-blue-400">
         <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">Følg meg på TikTok</a>
       </p>
-      <button
-        onClick={() => window.location = 'mailto:trymsolevaag@gmail.com'}
-        className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-green-500 text-white font-semibold rounded-xl shadow-md hover:bg-green-600 text-sm sm:text-base"
-      >
-        💌 Kontakt meg: trymsolevaag@gmail.com
-      </button>
+
+      <form onSubmit={handleSubmit} className="w-full max-w-md bg-white text-black p-4 rounded-xl shadow-lg">
+        <h3 className="text-xl font-bold mb-4 text-center">Send meg en melding</h3>
+        <input
+          type="text"
+          name="name"
+          placeholder="Navn"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full mb-2 p-2 rounded border"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="E-post"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full mb-2 p-2 rounded border"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Melding"
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full mb-2 p-2 rounded border"
+          required
+        />
+        <button type="submit" className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+          Send melding
+        </button>
+      </form>
     </div>
   );
 }
