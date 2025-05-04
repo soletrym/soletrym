@@ -38,7 +38,29 @@ export default function Home() {
         {darkMode ? '☀️' : '🌙'}
       </button>
       <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 text-center">Velkommen!</h1>
-      {/* --- Resten av innholdet beholdes som før --- */}
+      <p className="max-w-xl text-center mb-6 text-base sm:text-lg px-2">
+        Jeg heter Trym Solevåg og er komiker på deltid. Jeg elsker morsomme ting og ønsker å skape en plattform hvor vi kan ha det gøy og le sammen. Jeg har en herlig hund som heter Fam og skal bli pappa for første gang i august! Jeg elsker naturen, fotball og Liverpool, og jeg gamer en del – men jeg er spent på om det blir mindre tid til gaming når jeg blir pappa. Følg meg på Snapchat og TikTok for mer moro og innhold!
+      </p>
+      <div className="mb-6 w-full max-w-xl">
+        <video controls className="w-full rounded shadow-lg">
+          <source src="/a6K117m_460svh265.MP4" type="video/mp4" />
+          Nettleseren din støtter ikke video-taggen.
+        </video>
+      </div>
+      <h2 className="text-xl sm:text-2xl font-bold mb-2">Her kan du følge meg på Snapchat</h2>
+      <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer">
+        <img src="/snapkode.jpg" alt="Snapchat kode" className="mb-2 w-40 sm:w-48 h-40 sm:h-48 rounded shadow-lg" />
+      </a>
+      <p className="mb-6 underline text-blue-400">
+        <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer">Legg meg til på Snapchat</a>
+      </p>
+      <h2 className="text-xl sm:text-2xl font-bold mb-2">Her kan du følge meg på TikTok</h2>
+      <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">
+        <img src="/tiktokkode.jpg" alt="TikTok kode" className="mb-2 w-40 sm:w-48 h-40 sm:h-48 rounded shadow-lg" />
+      </a>
+      <p className="mb-6 underline text-blue-400">
+        <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">Følg meg på TikTok</a>
+      </p>
       <form onSubmit={handleSubmit} className="w-full max-w-md bg-white text-black p-4 rounded-xl shadow-lg mt-6">
         <h3 className="text-xl font-bold mb-4 text-center">Send meg en melding</h3>
         <input type="text" name="name" placeholder="Navn" value={formData.name} onChange={handleChange} className="w-full mb-2 p-2 rounded border" required />
