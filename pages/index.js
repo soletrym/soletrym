@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import { FaSnapchatGhost, FaTiktok } from 'react-icons/fa';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,10 +54,10 @@ export default function Home() {
         {showShareOptions && (
           <div className="mt-2 flex flex-col space-y-2">
             <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">
-              <FaSnapchatGhost className="mr-2" /> Del på Snapchat
+              📸 Del på Snapchat
             </a>
             <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">
-              <FaTiktok className="mr-2" /> Del på TikTok
+              🎵 Del på TikTok
             </a>
           </div>
         )}
