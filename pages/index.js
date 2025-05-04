@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import Head from 'next/head';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('');
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -20,6 +20,16 @@ export default function Home() {
 
   return (
     <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-b from-green-100 to-blue-100 text-gray-800'} min-h-screen flex flex-col items-center p-4 sm:p-6 font-[Comic Sans MS]`}>
+      <Head>
+        <title>SoleTrym – Komiker og innholdsskaper</title>
+        <meta name="description" content="Hei! Jeg heter Trym Solevåg. Jeg er komiker, innholdsskaper, snart pappa og Liverpool-fan. Følg meg på Snapchat og TikTok for humor, gaming og hverdagsmoro!" />
+        <meta name="keywords" content="Trym Solevåg, komiker, humor, Snapchat, TikTok, Liverpool, gaming, Fam, norsk komiker" />
+        <meta name="author" content="Trym Solevåg" />
+        <meta property="og:title" content="SoleTrym – Komiker og innholdsskaper" />
+        <meta property="og:description" content="Følg Trym Solevåg for humor, gaming og moro! På vei til å bli pappa, elsker Liverpool og lager innhold på TikTok og Snapchat." />
+        <meta property="og:image" content="/snapkode.jpg" />
+        <meta property="og:url" content="https://soletrym.no" />
+      </Head>
       <button onClick={toggleDarkMode} className="fixed top-4 right-4 text-2xl" title={darkMode ? 'Lys modus' : 'Mørk modus'}>
         {darkMode ? '☀️' : '🌙'}
       </button>
@@ -27,12 +37,6 @@ export default function Home() {
       <p className="max-w-xl text-center mb-6 text-base sm:text-lg px-2">
         Jeg heter Trym Solevåg og er komiker på deltid. Jeg elsker morsomme ting og ønsker å skape en plattform hvor vi kan ha det gøy og le sammen. Jeg har en herlig hund som heter Fam og skal bli pappa for første gang i august! Jeg elsker naturen, fotball og Liverpool, og jeg gamer en del – men jeg er spent på om det blir mindre tid til gaming når jeg blir pappa. Følg meg på Snapchat og TikTok for mer moro og innhold!
       </p>
-      <div className="mb-6 w-full max-w-xl">
-        <video controls className="w-full rounded shadow-lg">
-          <source src="/a6K117m_460svh265.MP4" type="video/mp4" />
-          Nettleseren din støtter ikke video-taggen.
-        </video>
-      </div>
       <h2 className="text-xl sm:text-2xl font-bold mb-2">Her kan du følge meg på Snapchat</h2>
       <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer">
         <img src="/snapkode.jpg" alt="Snapchat kode" className="mb-2 w-40 sm:w-48 h-40 sm:h-48 rounded shadow-lg" />
