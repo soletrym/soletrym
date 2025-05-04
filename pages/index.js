@@ -13,23 +13,9 @@ export default function Home() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
-        setStatus('Takk for meldingen! Jeg svarer snart.');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('Noe gikk galt. Prøv igjen senere.');
-      }
-    } catch (error) {
-      setStatus('Noe gikk galt. Prøv igjen senere.');
-    }
+    window.location = `mailto:trymsolevaag@gmail.com?subject=Melding fra ${formData.name}&body=${formData.message}%0A%0AFra: ${formData.email}`;
   };
 
   return (
@@ -67,7 +53,6 @@ export default function Home() {
         <input type="email" name="email" placeholder="E-post" value={formData.email} onChange={handleChange} className="w-full mb-2 p-2 rounded border" required />
         <textarea name="message" placeholder="Melding" value={formData.message} onChange={handleChange} className="w-full mb-2 p-2 rounded border" required />
         <button type="submit" className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Send melding</button>
-        {status && <p className="mt-2 text-center text-sm">{status}</p>}
       </form>
     </div>
   );
