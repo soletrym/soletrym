@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import { FaSnapchatGhost, FaTiktok } from 'react-icons/fa';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [showShareOptions, setShowShareOptions] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -27,12 +29,9 @@ export default function Home() {
         <meta name="author" content="Trym Solevåg" />
         <meta property="og:title" content="SoleTrym – Komiker og innholdsskaper" />
         <meta property="og:description" content="Følg Trym Solevåg for humor, gaming og moro! På vei til å bli pappa, elsker Liverpool og lager innhold på TikTok og Snapchat." />
-        <meta property="og:image" content="/snapkode.jpg" />
+        <meta property="og:image" content="/trymdel.png" />
         <meta property="og:url" content="https://soletrym.no" />
       </Head>
-      <button onClick={toggleDarkMode} className="fixed top-4 right-4 text-2xl" title={darkMode ? 'Lys modus' : 'Mørk modus'}>
-        {darkMode ? '☀️' : '🌙'}
-      </button>
       <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 text-center">Velkommen!</h1>
       <p className="max-w-xl text-center mb-6 text-base sm:text-lg px-2">
         Jeg heter Trym Solevåg og er komiker på deltid. Jeg elsker morsomme ting og ønsker å skape en plattform hvor vi kan ha det gøy og le sammen. Jeg har en herlig hund som heter Fam og skal bli pappa for første gang i august! Jeg elsker naturen, fotball og Liverpool, og jeg gamer en del – men jeg er spent på om det blir mindre tid til gaming når jeg blir pappa. Følg meg på Snapchat og TikTok for mer moro og innhold!
@@ -51,6 +50,19 @@ export default function Home() {
       <p className="mb-6 underline text-blue-400">
         <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">Følg meg på TikTok</a>
       </p>
+      <div className="mb-6">
+        <button onClick={() => setShowShareOptions(!showShareOptions)} className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">Del siden</button>
+        {showShareOptions && (
+          <div className="mt-2 flex flex-col space-y-2">
+            <a href="https://www.snapchat.com/add/soletrym" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">
+              <FaSnapchatGhost className="mr-2" /> Del på Snapchat
+            </a>
+            <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">
+              <FaTiktok className="mr-2" /> Del på TikTok
+            </a>
+          </div>
+        )}
+      </div>
       <form onSubmit={handleSubmit} className="w-full max-w-md bg-white text-black p-4 rounded-xl shadow-lg mt-6">
         <h3 className="text-xl font-bold mb-4 text-center">Send meg en melding</h3>
         <input type="text" name="name" placeholder="Navn" value={formData.name} onChange={handleChange} className="w-full mb-2 p-2 rounded border" required />
