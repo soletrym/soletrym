@@ -4,7 +4,6 @@ import Head from 'next/head';
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [showShareOptions, setShowShareOptions] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -20,15 +19,15 @@ export default function Home() {
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-b from-green-100 to-blue-100 text-gray-800'} min-h-screen flex flex-col items-center p-4 sm:p-6 font-[Comic Sans MS]`}>
+    <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-b from-green-100 to-blue-100 text-gray-800'} min-h-screen flex flex-col items-center p-4 sm:p-6 font-[Comic Sans MS] relative`}>
       <Head>
         <title>SoleTrym – Komiker og innholdsskaper</title>
         <meta name="description" content="Hei! Jeg heter Trym Solevåg. Jeg er komiker, innholdsskaper, snart pappa og Liverpool-fan. Følg meg på Snapchat og TikTok for humor, gaming og hverdagsmoro!" />
         <meta property="og:image" content="/trym12.jpg" />
         <meta property="og:url" content="https://soletrym.no" />
       </Head>
-      <button onClick={toggleDarkMode} className="mb-4 px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">
-        {darkMode ? '☀️ Lys modus' : '🌙 Mørk modus'}
+      <button onClick={toggleDarkMode} className="absolute top-4 right-4 text-2xl">
+        {darkMode ? '☀️' : '🌙'}
       </button>
       <img src="/trym12.jpg" alt="Trym Solevåg" className="mb-4 w-48 h-48 rounded-full shadow-lg object-cover" />
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-center">SoleTrym</h1>
