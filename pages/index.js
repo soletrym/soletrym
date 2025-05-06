@@ -27,6 +27,9 @@ export default function Home() {
         <meta property="og:image" content="/trym12.jpg" />
         <meta property="og:url" content="https://soletrym.no" />
       </Head>
+      <button onClick={toggleDarkMode} className="mb-4 px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">
+        {darkMode ? '☀️ Lys modus' : '🌙 Mørk modus'}
+      </button>
       <img src="/trym12.jpg" alt="Trym Solevåg" className="mb-4 w-48 h-48 rounded-full shadow-lg object-cover" />
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-center">SoleTrym</h1>
       <p className="max-w-xl text-center mb-6 text-base sm:text-lg px-2">
