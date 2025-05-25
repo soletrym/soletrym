@@ -92,15 +92,14 @@ export default function Home() {
             className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
           >
             📄 Last ned PDF
-          </a>
-          <a
-            href="https://www.notion.so/AI-hjelper-for-hverdagens-sm-problemer-1234567890abcdef"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            🔗 Bruk i Notion
-          </a>
+         <a
+  href="https://massive-nautilus-cc9.notion.site/AI-hjelper-for-hverdagens-sm-problemer-1fed2053c48380b097f8cb3f18825990"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+>
+  🔗 Bruk i Notion
+</a>
         </div>
       </div>
     </div>
