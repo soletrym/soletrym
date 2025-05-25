@@ -86,7 +86,7 @@ export default function Home() {
         </ul>
         <div className="flex justify-center gap-4">
           <a
-            href="/AI-hjelper_prompter.pdf"
+            href="/AI-hjelper_PROMPTER_KOMPLETT.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
