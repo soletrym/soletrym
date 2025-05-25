@@ -84,22 +84,14 @@ export default function Home() {
           <li>Full oppskrift med ingredienser og fremgangsmåte</li>
           <li>Tilpasset dine preferanser – raskt, sunt, barnevennlig osv.</li>
         </ul>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center">
           <a
-            href="/AI-hjelper_PROMPTER_KOMPLETT.pdf"
+            href="https://solevaag.gumroad.com/l/eermfs"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
           >
-            📄 Last ned PDF
-          </a>
-          <a
-            href="https://massive-nautilus-cc9.notion.site/AI-hjelper-for-hverdagens-sm-problemer-1fed2053c48380b097f8cb3f18825990"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          >
-            🔗 Bruk i Notion
+            🛒 Kjøp nå for 29 kr
           </a>
         </div>
       </div>
