@@ -27,12 +27,12 @@ export default function Home() {
         <meta property="og:url" content="https://soletrym.no" />
       </Head>
 
-      {/* Knapp: Mørk modus */}
+      {/* Mørk modus-knapp */}
       <button onClick={toggleDarkMode} className="absolute top-4 right-4 text-2xl">
         {darkMode ? '☀️' : '🌙'}
       </button>
 
-      {/* Knapp: Hjelp til middag */}
+      {/* Hjelp til middag-knapp */}
       <button
         onClick={() => document.getElementById('middagseksjon')?.scrollIntoView({ behavior: 'smooth' })}
         className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded shadow hover:bg-green-700 text-sm sm:text-base"
@@ -64,7 +64,7 @@ export default function Home() {
         <a href="https://www.tiktok.com/@soletrym" target="_blank" rel="noopener noreferrer">Følg meg på TikTok</a>
       </p>
 
-      {/* Kontakt */}
+      {/* Kontaktskjema */}
       <form onSubmit={handleSubmit} className="w-full max-w-md bg-white text-black p-4 rounded-xl shadow-lg mt-6">
         <h3 className="text-xl font-bold mb-4 text-center">Send meg en melding</h3>
         <input type="text" name="name" placeholder="Navn" value={formData.name} onChange={handleChange} className="w-full mb-2 p-2 rounded border" required />
@@ -73,7 +73,7 @@ export default function Home() {
         <button type="submit" className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Send melding</button>
       </form>
 
-      {/* Produktseksjon */}
+      {/* AI-produktseksjon */}
       <div id="middagseksjon" className="w-full max-w-2xl mt-12 bg-white text-black p-6 rounded-xl shadow-xl">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center">🍽️ AI-hjelper for middagstips</h2>
         <p className="mb-4 text-center">
@@ -92,14 +92,15 @@ export default function Home() {
             className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
           >
             📄 Last ned PDF
-         <a
-  href="https://massive-nautilus-cc9.notion.site/AI-hjelper-for-hverdagens-sm-problemer-1fed2053c48380b097f8cb3f18825990"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
->
-  🔗 Bruk i Notion
-</a>
+          </a>
+          <a
+            href="https://massive-nautilus-cc9.notion.site/AI-hjelper-for-hverdagens-sm-problemer-1fed2053c48380b097f8cb3f18825990"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            🔗 Bruk i Notion
+          </a>
         </div>
       </div>
     </div>
