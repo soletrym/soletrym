@@ -34,7 +34,7 @@ export default function Home() {
       </p>
 
       {/* Produkt-knapper */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-10">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-10">
         <a
           href="https://solevaag.gumroad.com/l/eermfs"
           target="_blank"
@@ -49,7 +49,15 @@ export default function Home() {
           rel="noopener noreferrer"
           className="bg-rose-600 text-white px-5 py-3 rounded-xl text-lg hover:bg-rose-700 shadow"
         >
-          🌸 Plakat: 5 ting barnet ditt trenger å høre
+          🌸 5 ting barnet ditt trenger å høre
+        </a>
+        <a
+          href="https://solevaag.gumroad.com/l/mvptl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-500 text-white px-5 py-3 rounded-xl text-lg hover:bg-yellow-600 shadow"
+        >
+          🎨 Hva føler jeg nå? (plakat)
         </a>
       </div>
 
